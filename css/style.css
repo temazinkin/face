@@ -1,0 +1,50 @@
+.bg-gray {
+    background-color: #e1e1e1;
+}
+
+.header {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.header_main {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.logo {
+}
+.logo_link {
+}
+.logo_img {
+    height: 27px;
+    width: auto;
+}
+.navbar {
+    margin-right: auto;
+}
+.navbar_main {
+}
+.navbar_list {
+    display: flex;
+}
+.navbar_item {
+}
+.navbar_link {
+    padding-right: 24px;
+}
+.search_box {
+}
+.search_field {
+}
+.account {
+}
+.btn {
+}
+.btn-yellow {
+}
+.btn-sm {
+}
+.header_navbar {
+}
