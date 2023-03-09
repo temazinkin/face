@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-gray">
-    <header class="header">
+    <header class="header container">
         <div class="logo">
             <a href="" class="logo_link">
                 <img src="img/logo.png" alt="" class="logo_img">
             </a>
         </div>
         <div class="search_box">
-            <input type="text" class="search_field" placeholder="Поиск">
+            <form action="" class="search_form">
+                <input type="text" class="search_field" placeholder="Поиск">
+                <button type="submit" class="search_btn">
+                    <img src="img/zoom.png" alt="найти" width="16" class="search_icon">
+                </button>
+            </form>
         </div>
         <nav class="navbar navbar_menu">
             <ul class="navbar_list">
@@ -35,8 +40,25 @@
             </ul>
         </nav>
         <div class="account">
-            <button class="btn btn-yellow btn-sm">Войти</button>
+            <button class="btn btn-yellow">Войти</button>
         </div>
     </header>
+    <section class="intro container">
+        <div class="intro_img_box">
+            <img src="/img/intro.png" alt="иконка монитор с кандидатами" class="intro_img">
+        </div>
+        <div class="intro_content_box">
+            <h1 class="title">
+                Нанимайте проверенных <span class="badge">кандидатов</span>
+            </h1>
+            <p class="subtitle text-gray">
+                Мы уже со всеми провели собеседования и подтверждаем их профессионализм
+            </p>
+             <div class="intro_btn_box">
+                <a href="" class="btn">Выбрать кандидата</a>
+                <a href="" class="btn">Попасть в базу</a>
+             </div>
+        </div>
+    </section>
 </body>
 </html>
