@@ -19,8 +19,8 @@ body {
     align-items: center;
     grid-template-columns: min-content;
     grid-template-areas:
-        "logo navbar search account"
-        "menu menu menu menu";
+        "logo navbar navbar search account"
+        "menu menu menu menu menu";
 }
 
 .logo {
@@ -50,7 +50,17 @@ body {
 .navbar_list {
     display: flex;
 }
+.navbar_list--wrap {
+    flex-wrap: wrap;
+}
 .navbar_item {
+    opacity: 1;
+    transition: opacity .2s ease;
+}
+.navbar_item.hide {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
 }
 .navbar_link {
     color: #111827;
@@ -135,10 +145,13 @@ body {
     background-color: #F1DF6F;
     border-color: #F1DF6F;
 }
+.btn-outline-yellow:hover,
 .btn-yellow:hover {
     background-color: #FEE965;
     border-color: #FEE965;
 }
+.btn-outline-yellow:active,
+.btn-outline-yellow:focus-visible,
 .btn-yellow:active,
 .btn-yellow:focus-visible {
     background-color: #F1DF6F;
@@ -146,8 +159,49 @@ body {
     outline: none;
     box-shadow: 0 0 0 4px #F1DF6F;
 }
-.btn-sm {
+.btn-lg {
+    font-size: 1.125em;
+    padding: 12px 32px;
+}
+.btn-outline-yellow {
+    border-color: #F1DF6F;
 }
 
-.header_navbar {
+.intro {
+    display: flex;
+    padding: 100px 15px;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.intro_img_box {
+    width: 45%;
+}
+.intro_content_box {
+    width: 55%;
+}
+.intro_img {
+    max-width: 100%;
+}
+.title {
+    font-size: 3.75rem;
+    line-height: 1.2;
+}
+.badge {
+    line-height: 1;
+    padding: 0 0.35em;
+    border-radius: 0.2em;
+    background-color: #F1DF6F;
+}
+.subtitle {
+    font-size: 1.75rem;
+    line-height: 1.28;
+    padding: 28px 0 48px;
+}
+.text-gray {
+    color: #626262;
+}
+.btn_group {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
