@@ -27,7 +27,7 @@ h2, .h2 {
 .header {
     display: grid;
     align-items: center;
-    grid-template-columns: min-content;
+    grid-template-columns: 1fr;
     grid-template-areas:
         "logo navbar navbar search account"
         "menu menu menu menu menu";
@@ -44,6 +44,10 @@ h2, .h2 {
     height: 27px;
     width: auto;
 }
+.logo--mobile {
+    display: none;
+}
+
 .navbar {
     margin-right: auto;
 }
@@ -92,10 +96,43 @@ h2, .h2 {
 .navbar_link:hover::before {
     transform: scaleX(1);
 }
+.navbar-close {
+    grid-area: btn;
+    align-self: center;
+    margin-left: 20px;
+}
+.hamburger {
+    gap: 5px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+}
+.line {
+    width: 16px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 100px;
+}
+.line:nth-child(2) {
+    width: 8px;
+}
+.navbar--open .line {
+    background-color: #9CA3AF;
+}
+.navbar--open .line:nth-child(2) {
+    width: 16px;
+    transform: rotate(-45deg);
+}
+.navbar--open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 4px);
+}
+.navbar--open .line:nth-child(3) {
+    display: none;
+}
 
 .search_box {
     grid-area: search;
-    margin: 24px 0 22px auto;
+    margin: 24px 20px 22px auto;
 }
 .search_field {
     border: 2px solid #fff;
