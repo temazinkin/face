@@ -29,7 +29,9 @@
                 <li class="navbar_item"><a href="" class="navbar_link">Backend-разработчики</a></li>
                 <li class="navbar_item"><a href="" class="navbar_link">Дизайнеры</a></li>
                 <li class="navbar_item"><a href="" class="navbar_link">Менеджеры по продажам</a></li>
-                <li class="navbar_item navbar_js_toggle navbar_js_link"><a href="" class="navbar_link carret-down">Ещё</a></li>
+                <li class="navbar_item navbar_js_toggle navbar_js_link" id="p1">
+                    <a href="" class="navbar_link carret-down">Ещё</a>
+                </li>
                 <li class="navbar_item navbar_js_link hide"><a href="" class="navbar_link">Пункт 1</a></li>
                 <li class="navbar_item navbar_js_link hide"><a href="" class="navbar_link">Пункт 2</a></li>
                 <li class="navbar_item navbar_js_link hide"><a href="" class="navbar_link">Пункт 3</a></li>
@@ -74,5 +76,90 @@
              </div>
         </div>
     </section>
+    <main class="container">
+        <section class="jobs_box">
+            <h3 class="h2 text-center">Выберите направление работы</h3>
+            <div class="jobs_grid">
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-marketing.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_counter">40+</span>
+                    <span class="job_title">Маркетинг</span>
+                </a>
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-code.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_counter">80+</span>
+                    <span class="job_title">Разработка</span>
+                </a>
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-char.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_title">Аналитика</span>
+                </a>
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-people.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_title">Комьюнити</span>
+                </a>
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-im.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_title">Дизайн</span>
+                </a>
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-arrow.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_title">Продажи</span>
+                </a>
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-comment.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_title">Контент</span>
+                </a>
+
+                <a href="" class="job">
+                    <span class="job_img_box">
+                        <img src="img/icon-star.png" alt="" class="job_img">
+                    </span>
+                    <span class="job_title">Топ-менеджмент</span>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const toggleHideClass = (element) => {
+            const hideClass = 'hide';
+            if (element.classList.contains(hideClass))
+                element.classList.remove(hideClass);
+            else
+                element.classList.add(hideClass);
+        };
+
+        const navbarToggle = (element) => {
+            element.preventDefault();
+            const navbarLinks = document.querySelectorAll('.navbar_js_link');
+            navbarLinks.forEach(toggleHideClass);
+        };
+
+        const navbarToggleLinks = document.querySelectorAll('.navbar_js_toggle');
+        navbarToggleLinks.forEach((element) => element.addEventListener('click', navbarToggle));
+    </script>
 </body>
 </html>
