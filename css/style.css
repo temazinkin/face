@@ -100,6 +100,7 @@ h2, .h2 {
     grid-area: btn;
     align-self: center;
     margin-left: 20px;
+    display: none;
 }
 .hamburger {
     gap: 5px;

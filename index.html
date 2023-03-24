@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body class="bg-gray">
-    <header class="header container navbar--open">
+    <header class="header container" id="header">
         <div class="logo">
             <a href="" class="logo_link">
                 <img src="img/logo.png" alt="" class="logo_img logo--desktop">
@@ -25,7 +25,7 @@
                 </button>
             </form>
         </div>
-        <div class="navbar-close">
+        <div class="navbar-close" id="navbar-close">
             <div class="hamburger">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -153,6 +153,15 @@
     </main>
 
     <script>
+        const toggleNavbarClass = (button) => {
+            const navbarClass = 'navbar--open';
+            const element = document.getElementById('header');
+            if (element.classList.contains(navbarClass))
+                element.classList.remove(navbarClass);
+            else
+                element.classList.add(navbarClass);
+        };
+
         const toggleHideClass = (element) => {
             const hideClass = 'hide';
             if (element.classList.contains(hideClass))
@@ -168,6 +177,8 @@
         };
 
         const navbarToggleLinks = document.querySelectorAll('.navbar_js_toggle');
+        const navbarCloseButton = document.getElementById('navbar-close');
+        navbarCloseButton.addEventListener('click', toggleNavbarClass);
         navbarToggleLinks.forEach((element) => element.addEventListener('click', navbarToggle));
     </script>
 </body>

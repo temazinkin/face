@@ -26,6 +26,9 @@
             "account account account";
         /* background-color: #fff; */
     }
+    .navbar-close {
+        display: block;
+    }
     .navbar_list {
         flex-direction: column;
         padding: 20px 0;
