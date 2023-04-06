@@ -231,7 +231,7 @@ h2, .h2 {
     max-width: 100%;
 }
 .title {
-    font-size: 3.75rem;
+    font-size: calc(1.625rem + 2.5vw);
     line-height: 1.2;
 }
 .badge {
@@ -324,4 +324,62 @@ h2, .h2 {
 .job:hover .job_counter {
     transform: translate(25px, -25px);
     transition: transform .2s ease;
+}
+
+
+
+.cta_box {
+    gap: 24px;
+    display: flex;
+    margin-top: 100px;
+}
+.cta_features_box {
+    width: 66.66%;
+    padding: 40px 30px;
+    border-radius: 16px;
+    background-color: #fff;
+}
+.features {
+}
+.features_title {
+    font-size: 1.75rem;
+    margin-left: 50px;
+    position: relative;
+    line-height: 1.2;
+}
+.features_title::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #F1DF6F;
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
+.features_title::after {
+    content: '';
+    height: 27px;
+    width: 30px;
+    position: absolute;
+    left: -53px;
+    top: -5px;
+    background: url('../img/check.png') no-repeat;
+    background-size: cover;
+}
+.features_description {
+}
+.cta_price_box {
+    width: 33.33%;
+    padding: 40px 30px;
+    border-radius: 16px;
+    background-color: #F1DF6F;
+}
+.text-red {
+}
+.btn {
+}
+.btn-lg {
+}
+.btn-white {
 }

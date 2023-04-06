@@ -1,3 +1,9 @@
+@media screen and (min-width: 1400px) {
+    .title {
+        font-size: 3.75rem;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .jobs_grid {
         grid-template-columns: repeat(3, 1fr);
@@ -14,6 +20,15 @@
 }
 
 @media screen and (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        padding: 50px 15px;
+    }
+
+    .intro_content_box {
+        width: auto;
+    }
+
     .jobs_grid {
         grid-template-columns: 1fr 1fr;
     }
