@@ -187,11 +187,19 @@ h2, .h2 {
     padding: 10px 50px;
     border-radius: 50px;
     cursor: pointer;
-    transition: background .2s ease, border .2s ease;
+    transition: background .2s ease, border .2s ease, box-shadow .2s ease;
 }
 .btn-yellow {
     background-color: #F1DF6F;
     border-color: #F1DF6F;
+}
+.btn-white {
+    color: #111827;
+    background-color: #fff;
+}
+.btn-white:hover {
+    background-color: #E5E7EB;
+    box-shadow: 0 0 0 2px #fff;
 }
 .btn-outline-yellow:hover,
 .btn-yellow:hover {
@@ -334,7 +342,7 @@ h2, .h2 {
     margin-top: 100px;
 }
 .cta_features_box {
-    width: 66.66%;
+    width: 60%;
     padding: 40px 30px;
     border-radius: 16px;
     background-color: #fff;
@@ -368,18 +376,34 @@ h2, .h2 {
     background-size: cover;
 }
 .features_description {
+    font-size: 1.25em;
+    line-height: 1.33;
+    max-width: 500px;
+    margin-bottom: 1.5em;
 }
 .cta_price_box {
-    width: 33.33%;
+    width: 40%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     padding: 40px 30px;
     border-radius: 16px;
     background-color: #F1DF6F;
 }
+.cta_price_box h2 {
+    margin-bottom: 0;
+}
+.cta_price_box::after {
+    content: attr(data-price);
+    position: absolute;
+    right: -10px;
+    bottom: -35px;
+    color: #e1e1e1;
+    font-weight: 600;
+    font-size: 10vw;
+    line-height: 1;
+}
 .text-red {
-}
-.btn {
-}
-.btn-lg {
-}
-.btn-white {
+    color: #F50F22;
 }
